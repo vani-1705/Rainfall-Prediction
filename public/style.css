@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 40px 16px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background-image: url("/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.login {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 36px 42px;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 30, 60, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.icon {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 6px;
+}
+
+h1 {
+    margin: 0 0 6px 0;
+    color: #10345c;
+    font-size: 30px;
+}
+
+.subtitle {
+    margin: 0 0 26px 0;
+    color: #2c4a68;
+    font-size: 14px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: 600;
+    color: #10345c;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+    padding: 11px 12px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    color: #10345c;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.field input::placeholder {
+    color: #8fa3b8;
+}
+
+.field input:focus,
+.field select:focus {
+    outline: 2px solid #2f7bf6;
+}
+
+button[type="submit"] {
+    margin-top: 28px;
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #2f7bf6, #1c5fd6);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+.btn-icon {
+    margin-right: 6px;
+}
+
+/* Result pages */
+.result-page {
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.result-page h2 {
+    color: #10345c;
+    margin-top: 10px;
+}
+
+.result-page a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #1c5fd6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.result-page a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive: stack into one column on small screens */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .login {
+        padding: 26px 22px;
+    }
+}
